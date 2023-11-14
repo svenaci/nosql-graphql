@@ -16,7 +16,17 @@ const App = () => {
 
   console.log(hotels);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1>My hotels</h1>
+      {hotels?.map((hotel) => (
+        <div key={hotel.id} className="hotel">
+          <h1>{hotel.name}</h1>
+          <p>{hotel.rating}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default App;
